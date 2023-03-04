@@ -1,36 +1,50 @@
-
-
 <script>
-    import {fade} from 'svelte/transition';
+    import { fade } from 'svelte/transition';
 </script>
 
-<div id="background" on:mousedown in:fade></div>
-<div id='container'>
-    <p>
-        <slot/>
-    </p>
+<div id="background" on:mousedown in:fade />
+<div id="container">
+    <div id="wrapper">
+        <p>
+            <slot />
+        </p>
+    </div>
+
+    <img src='crumbs.svg' alt=''/>
 </div>
 
 <style>
+
+    img{
+        position: absolute;
+       align-self: 100px;
+    }
+
     #container {
         position: fixed;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         align-content: center;
 
         width: 100vh;
-        height: fit-content;
+        height: 100vh;
+        left: 0;
+        top: 0;
+    }
+
+    #wrapper {
+        background-image: url('paper.svg');
+        background-size: 100% 100%;
+        padding: 4rem;
     }
 
     p {
         font-size: var(--sp-4xl);
-        margin-left: 2rem;
-        margin-right: 2rem;
-        background-image: url();
+       
     }
 
-    #background{
+    #background {
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -41,4 +55,3 @@
         opacity: 0.2;
     }
 </style>
-

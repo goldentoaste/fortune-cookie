@@ -54,13 +54,13 @@
 
             let t = dt / 1000;
         
-            // p.vx *= 0.99;
-            // p.vy += 700 * t;
+            p.vx *= 0.99;
+            p.vy += 700 * t;
 
-            // p.x += p.vx * t;
-            // p.y+= p.vy * t;
+            p.x += p.vx * t;
+            p.y+= p.vy * t;
 
-            // p.lifeSpan -= dt;
+            p.lifeSpan -= dt;
         
         });
 

@@ -36,7 +36,8 @@
     #parent {
         position: relative;
         height: fit-content;
-        
+        width: fit-content;
+        min-width: 600px    ;
     }
     #render {
         top: 0;

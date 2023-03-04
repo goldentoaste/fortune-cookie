@@ -1,55 +1,74 @@
 <!-- controller object for cookie -->
 <script lang="ts">
-    import { particleStore } from './cookieStore';
-    import CookieParticles from './CookieParticles.svelte';
-    import CookieRender from './CookieRender.svelte';
-    import ImageHolder from './imageHolder.svelte';
+  import { particleStore } from "./cookieStore";
+  import CookieParticles from "./CookieParticles.svelte";
+  import CookieRender from "./CookieRender.svelte";
+  import ImageHolder from "./imageHolder.svelte";
 
-    let crackAmount = 0;
-  
-    function onClick(e: MouseEvent) {
-        crackAmount += Math.random() * 0.4;
-        $particleStore.push({
-            x: e.offsetX,
-            y: e.offsetY,
-        });
-    }
+  let crackAmount = 0;
+
+  function onClick(e: MouseEvent) {
+    crackAmount += Math.random() * 0.4;
+    $particleStore.push({
+      x: e.offsetX,
+      y: e.offsetY,
+    });
+  }
 </script>
 
-<div id="parent" on:mouseup={onClick}>
-   
+<div
+  id="parent"
+  on:mouseup={onClick}
+>
+  <div id="render">
+    <CookieRender display={crackAmount <= 1} />
 
-    <div id="render">
-        <CookieRender display={crackAmount <= 1} />
+    <ImageHolder
+      width={600}
+      height={600}
+      src="cookie-left-half.svg"
+      display={crackAmount > 1}
+      flip={true}
+    />
+    <ImageHolder
+      width={600}
+      height={600}
+      src="cookie-right-half.svg"
+      display={crackAmount > 1}
+    />
+  </div>
 
-        <ImageHolder width={600} height={600} src="cookie-left-half.svg" display={crackAmount > 1} flip={true} />
-        <ImageHolder width={600} height={600} src="cookie-right-half.svg" display={crackAmount > 1} />
-      
-    </div>
-
-    <div id="particles">
-        <CookieParticles />
-    </div>
+  <div id="particles">
+    <CookieParticles />
+  </div>
 </div>
 
 <style>
-    #parent {
-        position: relative;
-        height: fit-content;
-        width: fit-content;
-        min-width: 600px    ;
-    }
-    #render {
-        top: 0;
-        left: 0;
-    }
-    #particles {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 100 !important;
-        pointer-events: none;
-    }
+  #parent {
+    width: calc(100vw - (var(--sp-xl) * 2));
+    margin-left: var(--sp-xl);
+    margin-right: var(--sp-xl);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+  }
+
+  #render {
+    top: 0;
+    left: 0;
+  }
+
+  #particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+  }
 </style>

@@ -3,16 +3,10 @@
     import { particleStore } from './cookieStore';
     import CookieParticles from './CookieParticles.svelte';
     import CookieRender from './CookieRender.svelte';
-    import { split } from '$lib/scripts/split';
-    import { fade } from 'svelte/transition';
     import ImageHolder from './imageHolder.svelte';
 
     let crackAmount = 0;
-    $: {
-        if (crackAmount > 1) {
-            console.log('cracked');
-        }
-    }
+  
     function onClick(e: MouseEvent) {
         crackAmount += Math.random() * 0.4;
         $particleStore.push({
@@ -29,9 +23,9 @@
 
     <div id="render">
         <CookieRender display={crackAmount <= 1} />
-
+ 
         <ImageHolder width={600} height={600} src="cookie-right-half.png" display={crackAmount > 1} />
-        <ImageHolder width={600} height={600} src="cookie-left-half.png" display={crackAmount > 1} />
+        <ImageHolder width={600} height={600} src="cookie-left-half.png" display={crackAmount > 1} flip={true} />
     </div>
 </div>
 

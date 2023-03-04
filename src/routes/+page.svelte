@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+
+<script>
+
+    import Cookie from "$lib/components/Cookie.svelte";
+
+    
+</script>
+
+
+<Cookie/>

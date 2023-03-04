@@ -1,11 +1,5 @@
-
-
 <script>
-
-    import Cookie from "$lib/components/Cookie.svelte";
-
-    
+  import Cookie from "$lib/components/Cookie.svelte";
 </script>
 
-
-<Cookie/>
+<Cookie />

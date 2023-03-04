@@ -1,5 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
+/*
+SPACING
+*/
+:root {
+  --sp-3xs: 0.125rem; /* 2px */
+  --sp-2xs: 0.25rem; /* 4px */
+  --sp-xs: 0.5rem; /* 8px */
+  --sp-sm: 0.75rem; /* 12px */
+  --sp-md: 1rem; /* 16px */
+  --sp-lg: 1.25rem; /* 20px */
+  --sp-xl: 1.5rem; /* 24px */
+  --sp-2xl: 2rem; /* 32px */
+  --sp-3xl: 2.5rem; /* 40px */
+  --sp-4xl: 3rem; /* 48px */
+  --sp-5xl: 4rem; /* 64px */
+  --sp-6xl: 5rem; /* 80px */
+  --sp-7xl: 8rem; /* 128px */
 
-h1{
-    color:red;
+  --brown: #ffbc64;
+  --light-brown: #fcab40;
+  --dark-brown: #bf6b04;
+  --yellow: #f2cb05;
+  --dark-yellow: #f2b705;
+  --red: #da4f1d;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* FONT STYLING */
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+p {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3rem; /* 48px */
+  line-height: 3.25rem;
+  margin-bottom: var(--sp-md);
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  margin-bottom: var(--sp-md);
+}
+
+h3 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  margin-bottom: var(--sp-md);
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  margin-bottom: var(--sp-sm);
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.body-title {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  font-weight: 700;
+}
+
+.body-text {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  margin-bottom: var(--sp-lg);
+}
+
+.subtitle {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  margin-bottom: var(--sp-lg);
+}
+
+.button-text {
+  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.caption-text {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+
+.overline {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
+  letter-spacing: 0.2em;
+  margin-bottom: var(--sp-xs);
+}
+
+.m-lg {
+  margin: var(--sp-lg);
+}
+
+.px-lg {
+  padding-left: var(--sp-lg);
+  padding-right: var(--sp-lg);
+}
+
+.primary-button {
+  align-items: center;
+  background-color: var(--light-brown);
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--black);
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Quicksand";
+  height: 52px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.primary-button:after {
+  background-color: var(--black);
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 52px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.primary-button:hover:after {
+  transform: translate(0, 0);
+}
+
+.primary-button:active {
+  background-color: var(--light-brown);
+  outline: 0;
+}
+
+.primary-button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .primary-button {
+    padding: 0 40px;
+  }
 }

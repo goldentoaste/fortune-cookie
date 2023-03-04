@@ -42,7 +42,8 @@
         particles.forEach((p) => {
             context!.fillStyle = p.color;
             context!.strokeStyle = p.borderColor;
-            context!.globalAlpha = p.lifeSpan / 3000 + 0.2
+            context!.globalAlpha = p.lifeSpan / 3000 + 0.3;
+            context!.lineWidth = 2;
             context?.beginPath();
 
             context?.ellipse(p.x, p.y, p.radius,p.radius, 0, 0, Math.PI * 2, );
@@ -79,9 +80,9 @@
                 color:randItem(colors),
                 borderColor: randItem(colors),
                 lifeSpan: (Math.floor(Math.random() * 2) + 1) * 1000,
-                radius: 2 + Math.floor(10 * Math.random()),
-                vx: Math.floor(Math.random()  * 500) - 250,
-                vy: -Math.floor(Math.random() * 300)-200
+                radius: 10 + Math.floor(10 * Math.random()),
+                vx: Math.floor(Math.random()  * 600) - 300,
+                vy: -Math.floor(Math.random() * 400)-200
             })
         }
     }

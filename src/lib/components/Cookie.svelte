@@ -45,15 +45,7 @@
 
 <style>
   #parent {
-    width: calc(100vw - (var(--sp-xl) * 2));
-    margin-left: var(--sp-xl);
-    margin-right: var(--sp-xl);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    width: 50%;
     aspect-ratio: 1 / 1;
   }
 
@@ -70,5 +62,10 @@
     height: 100%;
     z-index: 100;
     pointer-events: none;
+  }
+
+  @media screen and (min-width: 1024px) {
+    #parent {
+    }
   }
 </style>

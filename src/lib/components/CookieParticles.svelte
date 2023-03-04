@@ -23,7 +23,9 @@
 
     let particles: particle[] = [];
 
-    let x = 0;
+  
+
+    
     function render() {
         context?.clearRect(0, 0, 600, 600);
 
@@ -52,20 +54,20 @@
 
             let t = dt / 1000;
         
-            p.vx *= 0.99;
-            p.vy += 700 * t;
+            // p.vx *= 0.99;
+            // p.vy += 700 * t;
 
-            p.x += p.vx * t;
-            p.y+= p.vy * t;
+            // p.x += p.vx * t;
+            // p.y+= p.vy * t;
 
-            p.lifeSpan -= dt;
+            // p.lifeSpan -= dt;
         
         });
 
         particles= particles.filter((val)=>val.lifeSpan > 0);
 
 
-
+        // console.log(particles)
         window.requestAnimationFrame(render);
     }
 

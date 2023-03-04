@@ -17,23 +17,26 @@
 </script>
 
 <div id="parent" on:mouseup={onClick}>
-    <div id="particles">
-        <CookieParticles />
-    </div>
+   
 
     <div id="render">
         <CookieRender display={crackAmount <= 1} />
- 
-        <ImageHolder width={600} height={600} src="cookie-right-half.png" display={crackAmount > 1} />
-        <ImageHolder width={600} height={600} src="cookie-left-half.png" display={crackAmount > 1} flip={true} />
+
+        <ImageHolder width={600} height={600} src="cookie-left-half.svg" display={crackAmount > 1} flip={true} />
+        <ImageHolder width={600} height={600} src="cookie-right-half.svg" display={crackAmount > 1} />
+      
+    </div>
+
+    <div id="particles">
+        <CookieParticles />
     </div>
 </div>
 
 <style>
     #parent {
         position: relative;
-        width: fit-content;
         height: fit-content;
+        
     }
     #render {
         top: 0;
@@ -45,7 +48,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 100;
+        z-index: 100 !important;
         pointer-events: none;
     }
 </style>

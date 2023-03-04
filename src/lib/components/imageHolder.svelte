@@ -9,19 +9,23 @@
 
     let time = 0;
     let dt = 0;
-    let remainder = 1000;
+    let total = 800;
+    let remainder = total;
 
     let x = 0;
     let y = 0;
+    let rot = 0;
 
     function move() {
         dt = Date.now() - time;
         time = Date.now();
 
-        let t = (1000 - remainder) / 1000;
+        let t = (total - remainder) / total;
 
         x = t * 100 * (flip ? -1 : 1);
         y = Math.sin(t * Math.PI) * -100;
+        rot = 10 * t * (flip ? -1 : 1);
+        
 
         remainder -= dt;
 
@@ -37,13 +41,13 @@
         }
     }
 </script>
-<p>dasdasd</p>
+
 <img
     {src}
     {width}
     {height}
     alt=""
-    style={display ? `display:block; transform: translate(${x}px, ${y}px);` : 'display:none;'}
+    style={display ? `display:block; transform: translate(${x}px, ${y}px) rotate(${rot}deg);` : 'display:none;'}
     loading="lazy"
 />
 
@@ -51,5 +55,6 @@
     img {
         position: absolute;
         user-select: none;
+        z-index: -1;
     }
 </style>

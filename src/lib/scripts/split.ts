@@ -9,7 +9,7 @@ export function split(node : Node, {
         duration,
         css: (t:number)=>{
             const x = cubicInOut(t) * (flip? -1: 1) * 100;
-            const y = (t > 0.5? 1- elasticOut(t) :elasticOut(t)) * - 100;
+            const y = (t > 0.5? 1- cubicInOut(t) :cubicInOut(t)) * - 100;
             console.log(x, y)
             return `
                 transform: translate(${x}px, ${y}px);

@@ -4,6 +4,8 @@
     import CookieParticles from './CookieParticles.svelte';
     import CookieRender from './CookieRender.svelte';
     import { split } from '$lib/scripts/split';
+    import { fade } from 'svelte/transition';
+    import ImageHolder from './imageHolder.svelte';
 
     let crackAmount = 0;
     $: {
@@ -26,21 +28,10 @@
     </div>
 
     <div id="render">
-        {#if crackAmount <= 1}
-            <CookieRender />
-        {:else}
-            <img
-                width="600"
-                height="600"
-                src="cookie.jpg"
-                alt=""
-                in:split={{
-                    duration: 1000,
-        
-                }}
-            />
-            <img width="600" height="600" src="cookie.jpg" alt="" in:split={{ duration: 1000,flip:true }} />
-        {/if}
+        <CookieRender display={crackAmount <= 1} />
+
+        <ImageHolder width={600} height={600} src="cookie-right-half.png" display={crackAmount > 1} />
+        <ImageHolder width={600} height={600} src="cookie-left-half.png" display={crackAmount > 1} />
     </div>
 </div>
 
@@ -62,10 +53,5 @@
         height: 100%;
         z-index: 100;
         pointer-events: none;
-    }
-
-    img {
-        position: absolute;
-        user-select: none;
     }
 </style>

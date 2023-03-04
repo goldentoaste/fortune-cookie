@@ -2,7 +2,7 @@
 
 
     let img : HTMLImageElement ;
-
+    export let display = true;
     const click = ()=>{
         img.classList.add('clicked');
     }
@@ -13,7 +13,7 @@
 
 
 </script>
-<div id="parent"><img id='cookie' bind:this={img} src="cookie.jpg" width="600" height="600" alt='cookie'
+<div id="parent" style={display? '':'display:none;'}><img id='cookie' bind:this={img} src="cookie-whole.png" width="600" height="600" alt='cookie'
     on:mousedown={click}
     on:mouseup={release}
     /></div>

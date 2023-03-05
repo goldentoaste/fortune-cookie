@@ -38,11 +38,14 @@ export function generateText(code = '') {
 
 let templates = [
     'Beware of _adj_ _noun_.',
-    'Today will be the day of _events_'
+    'Today will be the day of _events_.',
+    'You will meet a _adj_ _noun_ today.',
+    'Its not a good idea to _verb_ _noun_.'
 ]
 
 let words = {
     _adj_: ['sharp', 'dangerous', 'tasty', 'soft', 'falling'],
-    _noun_: ['chairs', 'objects', 'strangers'],
-    _events_: ['party', 'encounters', 'meetings', 'feast']
+    _noun_: ['chairs', 'objects', 'strangers', 'mystery'],
+    _events_: ['party', 'encounters', 'meetings', 'feast'],
+    _verb_ : ['play', 'mess']
 }

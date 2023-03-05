@@ -88,6 +88,15 @@
       </div>
     </div>
   </div>
+
+  <footer>
+    <div>
+      <a href="">GitHub</a>
+      <a href="">DevPost</a>
+      <a href="">Misfortune Cookie</a>
+    </div>
+    <p>Made with ❤️ for RootHacks 2023 by Christina and Ray</p>
+  </footer>
 </div>
 
 <style>
@@ -202,6 +211,34 @@
 
   .team-member-information > h5 {
     margin-bottom: var(--sp-md);
+  }
+
+  footer {
+    border-top: 3px solid black;
+    text-align: center;
+    padding: calc(var(--sp-2xl)) 0px;
+    background-color: var(--light-brown);
+  }
+
+  footer > div > a {
+    font-family: "Quicksand";
+    color: black;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+  footer > p {
+    margin-top: var(--sp-xs);
+    opacity: 0.8;
+  }
+
+  footer > a:not(footer > a:last-of-type) {
+    margin-right: var(--sp-xl);
+  }
+
+  footer > a:visited {
+    color: black;
   }
 
   @media screen and (min-width: 1024px) {

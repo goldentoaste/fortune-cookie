@@ -41,6 +41,7 @@
 
     justify-content: center;
     align-items: center;
+    z-index: 1000;
   }
 
   img {

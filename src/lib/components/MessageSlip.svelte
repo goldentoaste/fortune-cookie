@@ -27,7 +27,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<p in:typewriter={{ speed: 3 }}>
+<p on:click in:typewriter={{ speed: 3 }}>
   <slot />
 </p>
 

@@ -6,7 +6,7 @@
       Crack open your fate with a cookie each day.<br />Let your fortune be
       told, come whatever may.
     </p>
-    <a class="primary-button">Find my fate</a>
+    <a href="/" class="primary-button">Find my fate</a>
   </div>
 
   <div class="banner">

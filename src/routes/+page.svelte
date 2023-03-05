@@ -5,19 +5,7 @@
     import html2canvas from 'html2canvas';
   import Cookie from "$lib/components/Cookie.svelte";
 
-    let src: string = '';
-    let width = 0;
-    let height = 0;
-
-    function render(){
-      console.log("sdasdas")
-      html2canvas(document.getElementsByTagName('body')[0]).then((canvas) =>{
-        console.log(canvas)
-        src = canvas.toDataURL();
-        width = canvas.width;
-        height = canvas.height;
-      })
-    }
+   
 </script>
 
 <div id="root">
@@ -28,11 +16,6 @@
 </div>
 
 
-
-
-{#if src}
-    <ImageContainer {src} {width} {height} on:click={()=>{src = '';}} ></ImageContainer>
-{/if}
 
 
 

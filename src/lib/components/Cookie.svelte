@@ -7,7 +7,8 @@
   import MessageSlip from "./MessageSlip.svelte";
   import { generateText } from "../scripts/textGen";
   import { scale } from "svelte/transition";
-
+  import html2canvas from "html2canvas";
+    import ImageContainer from "./ImageContainer.svelte";
   let crackAmount = 0;
 
   let message = "Bad Omen!";
@@ -44,6 +45,20 @@
       localStorage.clear();
     }
   }
+
+  let src: string = '';
+    let width = 0;
+    let height = 0;
+
+    function render(){
+      console.log("sdasdas")
+      html2canvas(document.getElementsByTagName('body')[0]).then((canvas) =>{
+        console.log(canvas)
+        src = canvas.toDataURL();
+        width = canvas.width;
+        height = canvas.height;
+      })
+    }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -82,13 +97,21 @@
   >
     <MessageSlip
       on:click={() => {
-        displayMessage = false;
+      render();
       }}
     >
       {message}
     </MessageSlip>
   </div>
 {/if}
+
+
+
+{#if src}
+    <ImageContainer {src} {width} {height} on:click={()=>{src = '';}} ></ImageContainer>
+{/if}
+
+
 
 <svelte:window on:keydown={clear} />
 

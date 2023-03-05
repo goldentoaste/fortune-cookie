@@ -42,19 +42,21 @@
     }
 </script>
 
+<!-- svelte-ignore a11y-missing-attribute -->
 <img
     {src}
     {width}
     {height}
-    alt=""
     style={display ? `display:block; transform: translate(${x}px, ${y}px) rotate(${rot}deg);` : 'display:none;'}
-    loading="lazy"
+
 />
 
 <style>
     img {
         position: absolute;
         user-select: none;
-        z-index: -1;
+        
+        /* width: 100%;
+        height: 100%; */
     }
 </style>

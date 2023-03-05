@@ -27,7 +27,7 @@
 
 <style global>
   img {
-    border: red 1px solid;
+
     transition: all cubic-bezier(0.5, 1, 0.89, 1) 200ms;
     user-select: none;
     width: 100%;
@@ -37,12 +37,12 @@
 
   :global(img#cookie:hover) {
     transform: scale(1.04) rotate(-5deg);
-    border: blue 1px solid;
   }
 
   :global(img#cookie.clicked) {
     transform: scale(0.96) rotate(5deg);
-    border: green 1px solid;
+    transition: all cubic-bezier(0.5, 1, 0.89, 1) 100ms;
+
   }
 
   @keyframes breath {

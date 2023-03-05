@@ -24,7 +24,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <div id="container">
-    <div id="background" on:click in:fade />
+    <!-- <div id="background" on:click in:fade /> -->
     <div id="wrapper">
         <p in:typewriter={{ speed: 3 }}>
             <slot />
@@ -40,22 +40,24 @@
         align-items: center;
 
         width: 100vw;
-        height: 100vh;
+        height: fit-content;
         left: 0;
+        bottom: 0;
+        margin-bottom: 1rem;
     }
 
     #wrapper {
-        background-color: beige;
-        border: 0.7rem black solid;
+        /* background-color: beige;
+        border: 4px black solid; */
         border-radius: 1rem;
-        padding: 4rem;
+        padding: var(--sp-lg) var(--sp-2xl);
     }
 
     p {
-        font-size: var(--sp-4xl);
+        font-size: var(--sp-2xl);
+        font-weight: 700;
         padding: 0;
         margin: 0;
-        align-self: flex-end;
     }
 
     #background {

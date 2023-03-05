@@ -229,15 +229,15 @@
   }
 
   footer > p {
-    margin-top: var(--sp-xs);
+    margin-top: var(--sp-sm);
     opacity: 0.8;
   }
 
-  footer > a:not(footer > a:last-of-type) {
-    margin-right: var(--sp-xl);
+  footer > div > a:not(footer > div > a:last-of-type) {
+    margin-right: var(--sp-md);
   }
 
-  footer > a:visited {
+  footer > div > a:visited {
     color: black;
   }
 

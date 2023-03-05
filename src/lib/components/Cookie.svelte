@@ -99,6 +99,7 @@
 
     max-width: 600px;
     position: relative;
+    z-index: 200;
   }
 
   #render {

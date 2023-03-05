@@ -27,20 +27,20 @@
   {style}
 >
   {#if displayDate}
-    <h4
+    <h5
       in:fade={{ duration: 1000, delay: 1000 }}
-      out:fade={{ duration: 1000 }}>{date}</h4
+      out:fade={{ duration: 1000 }}>{date}</h5
     >
   {:else}
-    <h4
+    <h5
       in:fade={{ duration: 1000, delay: 1000 }}
-      out:fade={{ duration: 1000 }}>{message}</h4
+      out:fade={{ duration: 1000 }}>{message}</h5
     >
   {/if}
 </div>
 
 <style>
-  h4 {
+  h5 {
     position: absolute;
   }
 

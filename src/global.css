@@ -81,7 +81,6 @@ h3 {
 h4 {
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */
-  margin-bottom: var(--sp-sm);
 }
 
 h5 {
@@ -137,6 +136,15 @@ h5 {
   padding-right: var(--sp-lg);
 }
 
+.m-2xl {
+  margin: var(--sp-2xl);
+}
+
+.px-2xl {
+  padding-left: var(--sp-2xl);
+  padding-right: var(--sp-2xl);
+}
+
 .primary-button {
   align-items: center;
   background-color: var(--brown);
@@ -147,10 +155,10 @@ h5 {
   cursor: pointer;
   display: flex;
   font-family: Inter, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   font-family: "Quicksand";
-  height: 52px;
+  height: 56px;
   justify-content: center;
   line-height: 24px;
   max-width: 100%;
@@ -168,7 +176,7 @@ h5 {
   border-radius: 8px;
   content: "";
   display: block;
-  height: 52px;
+  height: 56px;
   left: 0;
   width: 100%;
   position: absolute;
@@ -178,10 +186,6 @@ h5 {
   z-index: -1;
 }
 
-.primary-button:hover:after {
-  transform: translate(0, 0);
-}
-
 .primary-button:active {
   background-color: var(--light-brown);
   outline: 0;
@@ -189,6 +193,8 @@ h5 {
 
 .primary-button:hover {
   outline: 0;
+  background-color: #fd9000;
+  transition: 0.5s;
 }
 
 @media (min-width: 768px) {

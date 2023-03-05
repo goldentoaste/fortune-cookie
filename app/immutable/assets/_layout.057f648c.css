@@ -199,6 +199,65 @@ h5 {
   transition: 0.5s;
 }
 
+.button-small,
+.button-small::after {
+  width: 16px;
+  height: 40px;
+}
+
+.button-small::after {
+  height: 40px;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--brown);
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--black);
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  font-family: "Quicksand";
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  background-color: var(--black);
+  border-radius: 8px;
+  content: "";
+  display: block;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button:active {
+  background-color: var(--light-brown);
+  outline: 0;
+}
+
+.button:hover {
+  outline: 0;
+  background-color: #fd9000;
+  transition: 0.5s;
+}
+
 @media (min-width: 768px) {
   .primary-button {
     padding: 0 40px;

@@ -11,7 +11,10 @@
       {width}
       {height}
     />
-    <button on:click>close</button>
+    <button
+      class="button button-small"
+      on:click>close</button
+    >
   </div>
 </div>
 

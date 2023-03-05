@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    max-height: 100vh;
   }
 
   .cookie-container {

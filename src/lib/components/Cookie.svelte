@@ -26,7 +26,7 @@
                 localStorage.setItem('day', new Date().getDay().toString())
             }
             
-           
+           return;
         }
 
         crackAmount += Math.random() * 0.4;

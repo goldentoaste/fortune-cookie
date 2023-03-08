@@ -39,7 +39,7 @@
         harbinger of impending doom.</p
       >
     </div>
-    <div class="img"> <img src="cookie-banner.svg" /> </div>
+    <div class="img"> <img src="cookie-banner.svg" alt=''/> </div>
   </div>
 
   <div class="pattern" />

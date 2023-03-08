@@ -17,11 +17,10 @@
         shape: number;
     }
 
-    let colors = ['#ca8933', '#e39a3a', '#fcab40', '#fcb353', '#fdbc66', '#fdc479', '#fdcd8c', '#fed5a0', '#feddb3'];
 
     let particles: particle[] = [];
 
-    let shapes = [];
+    let shapes : CanvasImageSource[]= [];
 
     function render() {
         context?.clearRect(0, 0, 600, 600);

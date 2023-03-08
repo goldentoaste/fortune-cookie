@@ -141,13 +141,6 @@
     pointer-events: none;
   }
 
-  .hidden {
-    visibility: hidden;
-  }
-
-  .visible {
-    visibility: visible;
-  }
 
   #message {
     height: calc(100% - 600px - 20%);

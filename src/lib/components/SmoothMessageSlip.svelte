@@ -1,5 +1,6 @@
 <script lang="ts">
     import { typewriter } from '$lib/scripts/typewriter';
+    import { scale } from 'svelte/transition';
 
     export let text: string = '';
     export let showHeader = true;
@@ -7,7 +8,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="wrapper">
+<div in:scale class="wrapper">
     <div class="inner">
         {#if showHeader}
             <div class="header">
@@ -49,7 +50,7 @@
         padding: 0;
         margin: 0;
         line-height: 2rem;
-        text-align: justify;
+        text-align: left;
     }
 
     .wrapper {
